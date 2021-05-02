@@ -119,7 +119,7 @@ Now open the Git Bash and type
 ```
 git clone git@github.com:yourGithubUserName/CopiedRepository.git
 ```
-you will asked to type the passphrase and click enter. The repository will be cloned to the folder
+you will asked to type the passphrase and click enter. The repository will be cloned to the folder.
 
 
 
