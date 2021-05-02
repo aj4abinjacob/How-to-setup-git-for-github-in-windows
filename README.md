@@ -12,8 +12,8 @@
 
 ### 5. Add your name and email by typing the following 
 ```
-git config --global user.name "Abin Jacob"
-git config --global user.email "abinjacob123@gmail.com"
+git config --global user.name "your full name"
+git config --global user.email "yourEmailAddress@gmail.com"
 ```
 
 ### 6. Let's create some files and folders
@@ -30,7 +30,7 @@ cd ~/.ssh
 
 ### 8. Create ssh key 
 ```
-ssh-keygen -t ed25519 -C abinjacob123@gmail.com
+ssh-keygen -t ed25519 -C yourEmailAddress@gmail.com
 ```
 Give the file a name, something like gitwinkey.
 Two files will be created gitwinkey and gitwinkey.pub . The file with .pub should be added to your github account.
@@ -100,7 +100,7 @@ A notepad will be opened
 ```
 Host github.com
     HostName github.com
-    User aj4abinjacob
+    User yourUserName
     IdentityFile ~/.ssh/gitwinkey
 ```
 
