@@ -108,7 +108,7 @@ Host github.com
 ```
 source ~/.bashrc
 ```
-
+### 19. There will be a warning about wrong bashrc but ignore it
 
 
 
