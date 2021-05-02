@@ -1,16 +1,117 @@
 # How-to-setup-git-for-github-in-windows
 
+*use (shift+insert) to paste in git bash shell
+### 1. Login to your github account via browser and go to https://github.com/settings/emails and add a primary email address this email will be used through out this tutorial 
 
-### 1. Download git from https://git-scm.com/download/win
+### 2. Download git from https://git-scm.com/download/win
 
-### 2. Install git with recommended settings
+### 3. Install git with recommended settings
 
 
-### 3. Open Git Bash by using search 
+### 4. Open Git Bash by using search 
 
-### 4. Add your name and email by typing the following 
+### 5. Add your name and email by typing the following 
 ```
 git config --global user.name "Abin Jacob"
 git config --global user.email "abinjacob123@gmail.com"
-
 ```
+
+### 6. Let's create some files and folders
+```
+touch ~/.bashrc
+mkdir ~/.ssh
+touch ~/.ssh/
+```
+
+### 7. Change directory to .ssh
+```
+cd ~/.ssh
+```
+
+### 8. Create ssh key 
+```
+ssh-keygen -t ed25519 -C abinjacob123@gmail.com
+```
+Give the file a name, something like gitwinkey.
+Two files will be created gitwinkey and gitwinkey.pub . The file with .pub should be added to your github account.
+
+Add a passphrase, it's like a password for a password
+
+### 9. Run the ssh agent
+```
+eval `ssh-agent -s`
+```
+
+### 10. Add the key to shh agent
+```
+ssh-add ~/.ssh/gitwinkey
+```
+
+### 11. Copy the public ssh key to your clipboard
+```
+clip <- ~/.ssh/gitwin.pub
+```
+### 12. Pase the clipboard to github by going to https://github.com/settings/keys
+
+### 13. Test if it worked
+```
+ssh -T git@github.com
+```
+type yes after the entering this command
+
+### 14. Edit the bashrc file
+```
+notepad ~/.bashrc
+```
+An empty notepad will be opened
+
+### 15. Paste the following commands in the notepad and save it (ctrl+s)
+```
+SSH_ENV="$HOME/.ssh/environment"
+
+
+function start_agent {
+    echo "Initializing new SSH agent..."
+    touch $SSH_ENV
+    chmod 600 "${SSH_ENV}"
+    /usr/bin/ssh-agent | sed 's/^echo/#echo/' >> "${SSH_ENV}"
+    . "${SSH_ENV}" > /dev/null
+    /usr/bin/ssh-add
+}
+
+# Source SSH settings, if applicable
+if [ -f "${SSH_ENV}" ]; then
+    . "${SSH_ENV}" > /dev/null
+    kill -0 $SSH_AGENT_PID 2>/dev/null || {
+        start_agent
+    }
+else
+    start_agent
+fi
+```
+
+### 16. Edit the config file 
+```
+notepad ~/.ssh/config
+```
+A notepad will be opened
+
+### 17. Pase the following in the notepad and save it
+```
+Host github.com
+    HostName github.com
+    User aj4abinjacob
+    IdentityFile ~/.ssh/gitwinkey
+```
+
+### 18. Finally run
+```
+source ~/.bashrc
+```
+
+
+
+
+
+
+
