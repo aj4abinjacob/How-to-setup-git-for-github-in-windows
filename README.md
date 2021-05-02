@@ -57,6 +57,7 @@ clip <- ~/.ssh/gitwin.pub
 ```
 ssh -T git@github.com
 ```
+you will be asked to enter the passphrase
 type yes after the entering this command
 
 ### 14. Edit the bashrc file
@@ -108,8 +109,17 @@ Host github.com
 ```
 source ~/.bashrc
 ```
-### 19. There will be a warning about wrong bashrc but ignore it
+There may be a warning about wrong bashrc but ignore it
 
+### 19. Let's test it out
+Create a folder<br>
+Right click and click on "Git Bash here" <br>
+Go to any of your repositories and click on the green box "code" and click on ssh and then copy the ssh link<br>
+Now open the Git Bash and type 
+```
+git clone git@github.com:yourGithubUserName/CopiedRepository.git
+```
+you will asked to type the passphrase and click enter. The repository will be cloned to the folder
 
 
 
