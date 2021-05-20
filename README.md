@@ -49,7 +49,7 @@ ssh-add ~/.ssh/gitwinkey
 
 ### 11. Copy the public ssh key to your clipboard
 ```
-clip <- ~/.ssh/gitwin.pub
+clip <- ~/.ssh/gitwinkey.pub
 ```
 ### 12. Pase the clipboard to github by going to https://github.com/settings/keys
 
