@@ -44,12 +44,13 @@ eval `ssh-agent -s`
 
 ### 10. Add the key to shh agent
 ```
+cd
 ssh-add ~/.ssh/gitwinkey
 ```
 
 ### 11. Copy the public ssh key to your clipboard
 ```
-clip <- ~/.ssh/gitwinkey.pub
+cat ~/.ssh/gitwinkey.pub
 ```
 ### 12. Pase the clipboard to github by going to https://github.com/settings/keys
 
