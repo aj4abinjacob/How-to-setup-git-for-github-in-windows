@@ -1,4 +1,4 @@
-# How-to-setup-git-for-github-in-windows
+# How to setup git for github in windows
 
 *use (shift+insert) to paste in git bash shell
 ### 1. Login to your github account via browser and go to https://github.com/settings/emails and add a primary email address this email will be used through out this tutorial 
