@@ -103,7 +103,7 @@ A notepad will be opened
 Host github.com
     HostName github.com
     User yourUserName
-    IdentityFile ~/.ssh/gitwinkey
+    IdentityFile ~/.ssh/id_rsa
 ```
 
 ### 18. Finally run
