@@ -30,10 +30,10 @@ cd ~/.ssh
 
 ### 8. Create ssh key 
 ```
-ssh-keygen -t ed25519 -C yourEmailAddress@gmail.com
+ssh-keygen -t ed25519 -C "your_email@example.com"
 ```
-Give the file a name, something like gitwinkey.
-Two files will be created gitwinkey and gitwinkey.pub . The file with .pub should be added to your github account.
+Give the file a name, something like id_rsa.
+Two files will be created id_rsa and id_rsa.pub . The file with .pub should be added to your github account.
 
 Add a passphrase, it's like a password for a password
 
@@ -45,12 +45,12 @@ eval `ssh-agent -s`
 ### 10. Add the key to shh agent
 ```
 cd
-ssh-add ~/.ssh/gitwinkey
+ssh-add ~/.ssh/id_rsa
 ```
 
 ### 11. Copy the public ssh key to your clipboard
 ```
-cat ~/.ssh/gitwinkey.pub
+cat id_rsa.pub | clip
 ```
 ### 12. Pase the clipboard to github by going to https://github.com/settings/keys
 
