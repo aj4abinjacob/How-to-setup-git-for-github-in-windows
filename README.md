@@ -63,6 +63,7 @@ type yes after the entering this command
 #### The steps from here are to disable git bash asking id_rsa passphrase everytime you try to access github
 ### 14. Edit the bashrc file
 ```
+cd
 notepad ~/.bashrc
 ```
 An empty notepad will be opened
