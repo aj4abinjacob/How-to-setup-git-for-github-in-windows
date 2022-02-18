@@ -44,8 +44,7 @@ eval `ssh-agent -s`
 
 ### 10. Add the key to shh agent
 ```
-cd
-ssh-add ~/.ssh/id_rsa
+ssh-add id_rsa
 ```
 
 ### 11. Copy the public ssh key to your clipboard
@@ -61,6 +60,7 @@ ssh -T git@github.com
 you will be asked to enter the passphrase
 type yes after the entering this command
 
+#### The steps from here are to disable github asking id_rsa passphrase everytime you try to access github
 ### 14. Edit the bashrc file
 ```
 notepad ~/.bashrc
