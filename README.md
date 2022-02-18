@@ -60,7 +60,7 @@ ssh -T git@github.com
 you will be asked to enter the passphrase
 type yes after the entering this command
 
-#### The steps from here are to disable github asking id_rsa passphrase everytime you try to access github
+#### The steps from here are to disable git bash asking id_rsa passphrase everytime you try to access github
 ### 14. Edit the bashrc file
 ```
 notepad ~/.bashrc
